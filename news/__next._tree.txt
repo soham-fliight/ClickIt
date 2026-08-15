@@ -1,0 +1,4 @@
+:HL["/ClickIt/_next/static/chunks/28igillm7hu4f.css","style"]
+:HL["/ClickIt/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ClickIt/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(app)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"news","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"D_plUPafI7PVP3SFNRn5w"}
