@@ -53,6 +53,14 @@ Award splits follow a simplified **General Retail Industry Award**: evening afte
 - In-memory demo store (refresh-safe via Reset)
 - Vitest for permission + shift-engine rules
 
+## Live demo
+
+GitHub Pages: [https://soham-fliight.github.io/ClickIt/](https://soham-fliight.github.io/ClickIt/)
+
+The site is a static export. Every push to `main` rebuilds `gh-pages` via `.github/workflows/pages.yml`.
+
+One-time GitHub setting (required before the URL serves): **Settings → Pages → Deploy from a branch → `gh-pages` / `/` (root)**.
+
 ## Run
 
 ```bash
@@ -67,6 +75,8 @@ Open [http://localhost:3000](http://localhost:3000). Start as **Alex Chen** (che
 npm run build
 npm run lint
 ```
+
+`npm run build` writes a static site to `out/` (`output: "export"`). Local builds stay at `/`. The Pages workflow sets `GITHUB_PAGES=true` so assets land under `/ClickIt/`.
 
 ## Integrations in the demo
 
