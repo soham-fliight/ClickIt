@@ -57,7 +57,9 @@ Award splits follow a simplified **General Retail Industry Award**: evening afte
 
 GitHub Pages: [https://soham-fliight.github.io/ClickIt/](https://soham-fliight.github.io/ClickIt/)
 
-The site is a static export. Every push to `main` (and this first deploy branch) rebuilds it via `.github/workflows/pages.yml`.
+The site is a static export. Every push to `main` rebuilds `gh-pages` via `.github/workflows/pages.yml`.
+
+One-time GitHub setting (required before the URL serves): **Settings → Pages → Deploy from a branch → `gh-pages` / `/` (root)**.
 
 ## Run
 
