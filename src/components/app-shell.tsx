@@ -5,6 +5,7 @@ import {
   CalendarDays,
   CheckSquare,
   Clock3,
+  Ellipsis,
   Home,
   LayoutGrid,
   ListTodo,
@@ -31,10 +32,11 @@ const NAV: {
   mobile?: boolean;
 }[] = [
   { href: "/today", label: "Today", icon: Home, mobile: true },
-  { href: "/schedule", label: "My roster", icon: CalendarDays, permission: "schedule.view.own", mobile: true },
+  { href: "/schedule", label: "My roster", icon: CalendarDays, permission: "schedule.view.own" },
   { href: "/roster", label: "Team roster", icon: LayoutGrid, permission: "schedule.view.department" },
   { href: "/market", label: "Shift market", icon: ArrowLeftRight, permission: "shifts.claim", mobile: true },
   { href: "/clock", label: "Clock", icon: Clock3, permission: "clock.own", mobile: true },
+  { href: "/more", label: "More", icon: Ellipsis, mobile: true },
   { href: "/availability", label: "Availability", icon: Sun, permission: "availability.edit.own" },
   { href: "/approvals", label: "Approvals", icon: CheckSquare, permission: "approvals.queue" },
   { href: "/team", label: "Team", icon: Users, permission: "team.view" },
@@ -50,6 +52,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const { me, store, state, can, toast, dispatch } = useAppStore();
   const role = roleById(me.roleId);
   const items = NAV.filter((item) => !item.permission || can(item.permission));
+  const desktop = items.filter((item) => item.href !== "/more");
   const mobile = items.filter((item) => item.mobile).slice(0, 4);
 
   return (
@@ -60,7 +63,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <p className="text-xs text-ink-soft">The floor, without UKG.</p>
         </Link>
         <nav className="mt-8 flex flex-1 flex-col gap-1">
-          {items.map((item) => {
+          {desktop.map((item) => {
             const active = pathname === item.href;
             const Icon = item.icon;
             return (

@@ -352,7 +352,6 @@ function shift(
 }
 
 const mon = addDays(DEMO_TODAY, -5);
-const tue = addDays(DEMO_TODAY, -4);
 const wed = addDays(DEMO_TODAY, -3);
 const thu = addDays(DEMO_TODAY, -2);
 const fri = addDays(DEMO_TODAY, -1);
